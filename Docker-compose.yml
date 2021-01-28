@@ -1,0 +1,50 @@
+version: '3.7'
+
+services:
+  # Backend Container
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: youtubeclone-backend
+    container_name: youtubeclone-backend
+    command: /app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./backend/:/app
+      - /app/node_modules
+    ports:
+      - 5000:5000
+    # depends_on:
+    #   - MongoDB
+    env_file: ./backend/.env
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+  # Frontend Container
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: youtubeclone-frontend
+    container_name: youtubeclone-frontend
+    command: npm start
+    volumes:
+      - ./client/:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    networks:
+      - app-network
+
+networks:
+  app-network:
+      driver: bridge
+
+volumes:
+  data-volumes:
+  node_modules:
+  web-root:
+    driver: local
