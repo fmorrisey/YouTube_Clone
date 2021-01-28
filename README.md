@@ -1,10 +1,8 @@
-# React MERN Clone
+# React MERN YouTube Clone
 - M : MongoDB
 - E : Express
 - R : React
 - N : Node
-
-
 ## Setup
 
 Create .env file inside the backend directory that includes:
@@ -38,5 +36,10 @@ To kill the services:
 
 - `CTRL + C` and then `$ docker compose-down`
 
-### Project Update:
+### Troubleshooting
+
+If your container fails to build or exits with an error code
+`docker build -t <APP_NAME> .`
+
+## Project Update:
 - 01/24/2021: Docker-Compose tested and App Container deploys
