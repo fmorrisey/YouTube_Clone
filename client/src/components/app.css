@@ -1,0 +1,16 @@
+.col-align {
+    text-align: center;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.row-spacer {
+    margin-bottom: 2em;
+}
