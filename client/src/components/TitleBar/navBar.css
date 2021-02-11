@@ -10,3 +10,11 @@ h1 {
     padding-bottom: 0.2em;
     padding-left: 1em;
 }
+
+img {
+    width: 100px;
+}
+
+.navbar {
+    background: #202020;
+}

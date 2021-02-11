@@ -1,0 +1,16 @@
+@media screen and (min-device-width: 320px) {
+    iframe {
+        width: 100%;
+        
+    }
+}
+  
+
+  
+@media screen and (max-device-width: 768px) {
+    iframe {
+        width: 100%;
+        
+    }
+
+}

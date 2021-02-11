@@ -4,7 +4,7 @@ import "./app.css";
 
 import TitleBar from "./TitleBar/navBar";
 
-import Footer from "./Footer/footer";
+import Player from "./Player/player"
 
 //Class or Stateful Component
 export default class App extends Component {
@@ -17,8 +17,7 @@ export default class App extends Component {
     return (
       <div className="container-fluid">
         <TitleBar />
-       
-        <Footer />
+        <Player />
       </div>
     );
   }
