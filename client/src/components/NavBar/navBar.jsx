@@ -1,13 +1,12 @@
 import React from "react";
 import "./navBar.css";
 import brand from "./yt_logo_rgb_dark.png";
-import { Menu } from "react-feather";
 
 export default function TitleBar(props) {
   return (
     <nav className="">
       <div>
-        <Menu color="#ffff" width={35} />
+        {/* Menu */}
         <img src={brand} alt={brand} />
       </div>
       
