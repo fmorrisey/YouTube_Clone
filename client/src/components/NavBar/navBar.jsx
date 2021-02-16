@@ -10,7 +10,8 @@ export default function TitleBar(props) {
         <Menu color="#ffff" width={35} />
         <img src={brand} alt={brand} />
       </div>
-
+      
+      
       <div className="col-md-12" style={{ padding: 0 }}>
         <div className="navbar-nav"></div>
       </div>

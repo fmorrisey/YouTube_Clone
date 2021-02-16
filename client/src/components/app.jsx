@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
 import "./app.css";
 
 import NavBar from "./NavBar/navBar";
@@ -10,7 +9,7 @@ import Player from "./Player/player"
 export default class App extends Component {
   constructor(props) {
     super(props);
-    
+    // NOT USESLESS
   }
 
   render() {
