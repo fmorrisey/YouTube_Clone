@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import "./app.css";
 
-import TitleBar from "./TitleBar/navBar";
+import NavBar from "./NavBar/navBar";
 
 import Player from "./Player/player"
 
@@ -16,7 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="">
-        <TitleBar />
+        <NavBar />
         <Player />
       </div>
     );
