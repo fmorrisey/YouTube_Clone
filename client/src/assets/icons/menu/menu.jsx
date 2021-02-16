@@ -1,5 +1,5 @@
 import React from "react";
-import "../../icons/icons.css";
+import "../icons.css";
 import menuSVG from "./menu.svg"
 
 const Menu = () => {
