@@ -1,0 +1,29 @@
+{
+  "name": "youtube_clone",
+  "version": "1.0.0",
+  "description": "A MERN clone of the popular cat video consumpution platform",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^7.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmorrisey/YouTube_Clone.git"
+  },
+  "keywords": [
+    "YouTube",
+    "MERN",
+    "React",
+    "Clone"
+  ],
+  "author": "Forrest I Morrisey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fmorrisey/YouTube_Clone/issues"
+  },
+  "homepage": "https://github.com/fmorrisey/YouTube_Clone#readme"
+}
