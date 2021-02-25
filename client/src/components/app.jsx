@@ -1,33 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 import "./app.css";
 
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { makeStyles } from "@material-ui/core/styles";
 import NavBar from "./NavBar/navBar";
 
-import Player from "./Player/player"
-
-import Button from "./Buttons/buttons"
+import Player from "./Player/player";
 
 //Class or Stateful Component
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {clickCount: 0};
-    this.onClickMSG = this.onClickMSG.bind(this);
 
-  }
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    background: "#181818",
+    margin: 0,
+  },
+}));
 
-  onClickMSG(){
-    this.setState = this.state.clickCount++;
-    console.log(this.state.clickCount, "I've been click captain!")
-  }
+export default function App() {
+  const classes = useStyles();
 
-  render() {
-    return (
-      <div className="">
-        <NavBar />
-        {/* <Player /> */}
-        <Button className="red" children="test" onClick={this.onClickMSG}/>
-      </div>
-    );
-  }
+  return (
+    <div className={classes.root}>
+      <NavBar />
+      {/* <Player /> */}
+    </div>
+  );
 }

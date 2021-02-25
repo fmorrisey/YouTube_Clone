@@ -4,6 +4,7 @@
   "description": "A MERN clone of the popular cat video consumpution platform",
   "main": "index.js",
   "dependencies": {
+    "@material-ui/icons": "^4.11.2",
     "npm": "^7.5.4"
   },
   "devDependencies": {},
