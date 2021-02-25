@@ -1,7 +1,7 @@
 # React MERN YouTube Clone
 - M : MongoDB
 - E : Express
-- R : React
+- R : React / Material-UI
 - N : Node
 ## Setup
 
@@ -43,3 +43,4 @@ If your container fails to build or exits with an error code
 
 ## Project Update:
 - 01/24/2021: Docker-Compose tested and App Container deploys
+- 02/25/2021: Material-UI Core integrated into the project to match YouTube's theme
