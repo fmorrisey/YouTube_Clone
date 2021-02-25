@@ -1,10 +1,11 @@
 import React from "react";
 import "./app.css";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
-import NavBar from "./NavBar/navBar";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 
+import NavBar from "./NavBar/navBar";
 import Player from "./Player/player";
 
 //Class or Stateful Component
@@ -12,9 +13,17 @@ import Player from "./Player/player";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    background: "#181818",
-    margin: 0,
   },
+  sideRail: {
+    marginTop: theme.spacing(3),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+  },
+  player: {
+    marginTop: theme.spacing(3),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+  }
 }));
 
 export default function App() {
@@ -23,7 +32,26 @@ export default function App() {
   return (
     <div className={classes.root}>
       <NavBar />
-      {/* <Player /> */}
+      <Grid container spacing={0}>
+        <Grid item md={9} xs={12}>
+          <div className={classes.player}>
+            <Player />
+            <span><h1>TITLE!</h1></span>
+            <span><p>Views!</p></span>
+          </div>
+        </Grid>
+        <Grid item md={3} xs={12}>
+          <Paper className={classes.sideRail}>
+            SIDE RAIL
+          </Paper>
+        </Grid>
+        <Grid item md={8} xs={12}>
+          <Paper className={classes.paper}>About Section</Paper>
+        </Grid>
+        <Grid item md={8} xs={12}>
+          <Paper className={classes.paper}>Comments Section</Paper>
+        </Grid>
+      </Grid>
     </div>
   );
 }

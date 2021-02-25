@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
-    "npm": "^7.5.4"
+    "npm": "^7.5.4",
+    "react-iframe": "^1.8.0"
   },
   "devDependencies": {},
   "scripts": {

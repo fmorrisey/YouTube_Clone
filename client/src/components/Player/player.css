@@ -1,16 +1,15 @@
-@media screen and (min-device-width: 320px) {
+@media screen and (min-device-width: 475px) {
     iframe {
         /* https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video */
         width: 100%;
         height: calc(100vw/2.5);
     }
 }
-  
 
-  
-@media screen and (max-device-width: 768px) {
+@media screen and (max-device-width: 680px) {
     iframe {
         width: 100%;
+        height: calc(100vw/1.5);
         
     }
 
