@@ -9,6 +9,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
+
+import SideBar from "../SideBar/sidebar"
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
