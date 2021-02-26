@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   list: {
     width: 240,
     color: "#FFFFFF",
+    marginBottom: theme.spacing(0),
   },
   fullList: {
     width: "auto",
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   icons: {
     color: "#909090",
     marginLeft: theme.spacing(1),
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(0),
   },
   MuiDivider: {
     backgroundColor: "#373737",
