@@ -18,27 +18,25 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-//import InboxIcon from "@material-ui/icons/MoveToInbox";
+
+// Icons
 import MailIcon from "@material-ui/icons/Mail";
 import HomeIcon from "@material-ui/icons/Home";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
-import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import SlideshowIcon from '@material-ui/icons/Slideshow';
-import PlayCircleIcon from '@material-ui/icons/PlayCircleFilledWhite';
-import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
-import HistoryIcon from '@material-ui/icons/History';
-import WatchLaterIcon from '@material-ui/icons/WatchLater';
-import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
-import ThumbDownIcon from '@material-ui/icons/ThumbDown';
-
-// Icons
-//import { HomeIcon, InboxIcon, WhatshotIcon } from '@material-ui/icons';
+import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
+import YouTubeIcon from "@material-ui/icons/YouTube";
+import SlideshowIcon from "@material-ui/icons/Slideshow";
+import PlayCircleIcon from "@material-ui/icons/PlayCircleFilledWhite";
+import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
+import HistoryIcon from "@material-ui/icons/History";
+import WatchLaterIcon from "@material-ui/icons/WatchLater";
+import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 0,
   },
   appBar: {
     textColor: "#FFFFFF",
@@ -67,8 +65,7 @@ const useStyles = makeStyles((theme) => ({
     // Resize Later
   },
   listHeader: {
-    color: "#909090",
-    marginLeft: theme.spacing(2),
+    color: "#000000",
   },
   fullList: {
     width: "auto",
@@ -183,8 +180,29 @@ export default function NavBar() {
           <ListItemText primary="Liked" />
         </ListItem>
         <Divider classes={{ root: classes.MuiDivider }} />
-        <ListItem >
-          <ListItemText classname={classes.listHeader} primary="SUBSCRIPTIONS" />
+        <ListItem>
+          <ListItemText
+            classname={classes.listHeader}
+            primary="SUBSCRIPTIONS"
+          />
+        </ListItem>
+        <ListItem button classname={classes.listItem}>
+          <ListItemIcon className={classes.icons}>
+            <AccountCircleOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText primary="SCOTT MANLEY" />
+        </ListItem>
+        <ListItem button classname={classes.listItem}>
+          <ListItemIcon className={classes.icons}>
+            <AccountCircleOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText primary="CHILLED COW" />
+        </ListItem>
+        <ListItem button classname={classes.listItem}>
+          <ListItemIcon className={classes.icons}>
+            <AccountCircleOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText primary="NASA JPL" />
         </ListItem>
       </List>
     </div>
