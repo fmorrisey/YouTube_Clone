@@ -37,8 +37,6 @@ export default function App() {
         <Grid item md={9} xs={12}>
           <div className={classes.player}>
             <Player />
-            <span><h1>TITLE!</h1></span>
-            <span><p>Views!</p></span>
           </div>
         </Grid>
         <Grid item md={3} xs={12}>
