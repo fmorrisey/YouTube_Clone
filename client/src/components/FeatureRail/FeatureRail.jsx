@@ -7,19 +7,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  sideRail: {
+  featRail: {
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(3),
     marginRight: theme.spacing(3),
-  },
-  player: {
-    marginTop: theme.spacing(3),
-    marginLeft: theme.spacing(3),
-    marginRight: theme.spacing(3),
-  },
+  }
 }));
 
 export default function FeatureRail() {
   const classes = useStyles();
-  return <Paper className={classes.sideRail}>SIDE RAIL</Paper>;
+  return <Paper className={classes.featRail}>Feature Rail</Paper>;
 }
