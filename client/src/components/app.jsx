@@ -7,6 +7,7 @@ import Paper from "@material-ui/core/Paper";
 
 import NavBar from "./NavBar/navBar";
 import Player from "./Player/player";
+import FeatureRail from "./FeatureRail/FeatureRail";
 
 //Class or Stateful Component
 
@@ -41,9 +42,7 @@ export default function App() {
           </div>
         </Grid>
         <Grid item md={3} xs={12}>
-          <Paper className={classes.sideRail}>
-            SIDE RAIL
-          </Paper>
+          <FeatureRail />
         </Grid>
         <Grid item md={8} xs={12}>
           <Paper className={classes.paper}>About Section</Paper>
