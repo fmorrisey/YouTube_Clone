@@ -16,6 +16,7 @@ export default function player() {
       </span>
       <span>
         <p>Views!</p>
+        {/* Api props for view counts info */}
       </span>
     </div>
   );
