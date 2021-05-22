@@ -1,23 +1,41 @@
 "use strict";
 
 // Package dependencies
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const debug = require("debug");
-
 const app = express();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 
-require("dotenv").config();
+require("./config/mongodb.config")
+  .configure()
+  .then((res) => {
+    app.use(cors());
+    app.use(express.json());
 
-app.use(cors());
-app.use(express.json());
+    //===========ROUTERS==============
+    const commentsRouter = require("./routes/comments.routes");
+    //... More routers to come
 
+    //===========Express App Use==============
+
+    app.use("/comments", commentsRouter);
+  })
+  .catch((err) => {
+    throw err;
+  });
+
+// connection port messages for successful launch!
+app.listen(port, () => {
+  console.log(`YouTube is live! Running on port: ${port}`);
+});
+
+module.exports = app;
 
 //===========MONGOOSE x MongoDB=============
+/*          ?? DEPRECATED ??
 // connection string parser for MongoDB
 // connection constructor
 const uri = process.env.ATLAS_URI;
@@ -41,16 +59,4 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
-
-// connection port messages for successful launch!
-app.listen(port, () => {
-  console.log(`YouTube is live! Running on port: ${port}`);
-});
-
-//===========ROUTERS==============
-//const productsRouter = require("./inventory/routes/product");
-//... More routers to come
-
-//app.use("/products", productsRouter);
-
-module.exports = app;
+*/
