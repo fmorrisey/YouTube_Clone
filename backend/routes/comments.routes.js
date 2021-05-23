@@ -4,6 +4,8 @@ const commentsController = require("../controller/comments.controller");
 
 // router.route("/comment/create").get(initPage, commentsController.getComments);
 
+router.get("/", commentsController.getComments);
+
 router.post("/create", commentsController.createComment);
 
 module.exports = router;
