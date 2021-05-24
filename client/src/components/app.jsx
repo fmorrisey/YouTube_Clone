@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(3),
     marginRight: theme.spacing(3),
   },
+  comments: {
+    marginLeft: theme.spacing(10),
+  },
 }));
 
 export default function App() {
@@ -47,9 +50,7 @@ export default function App() {
           <Paper className={classes.paper}>About Section</Paper>
         </Grid>
         <Grid item md={8} xs={12}>
-          <Paper className={classes.paper}>
-            <Comments />
-          </Paper>
+          <Comments className={classes.comments} />
         </Grid>
       </Grid>
     </div>
