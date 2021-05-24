@@ -8,6 +8,7 @@ import Paper from "@material-ui/core/Paper";
 import NavBar from "./NavBar/navBar";
 import Player from "./Player/player";
 import FeatureRail from "./FeatureRail/FeatureRail";
+import Comments from "./Comments/Comments";
 
 //Class or Stateful Component
 
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(3),
     marginRight: theme.spacing(3),
-  }
+  },
 }));
 
 export default function App() {
@@ -46,7 +47,9 @@ export default function App() {
           <Paper className={classes.paper}>About Section</Paper>
         </Grid>
         <Grid item md={8} xs={12}>
-          <Paper className={classes.paper}>Comments Section</Paper>
+          <Paper className={classes.paper}>
+            <Comments />
+          </Paper>
         </Grid>
       </Grid>
     </div>
