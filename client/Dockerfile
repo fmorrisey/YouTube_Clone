@@ -1,5 +1,7 @@
 # Pull base image
-FROM node:alpine
+FROM node:9
+
+# RUN apt-get update || : && apt-get install python -y
 
 # set the working directory
 WORKDIR /app
@@ -13,6 +15,7 @@ COPY package*.json ./
 COPY package-lock.json ./
 
 RUN npm install --silent
+
 
 # add app
 COPY . ./
