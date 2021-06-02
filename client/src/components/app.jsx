@@ -29,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
   comments: {
     marginLeft: theme.spacing(10),
   },
+  featuredRail: {
+    marginTop: theme.spacing(3),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+  },
 }));
 
 export default function App() {
@@ -44,7 +49,7 @@ export default function App() {
           </div>
         </Grid>
         <Grid item md={3} xs={12}>
-          <FeatureRail />
+          <FeatureRail className={classes.featuredRail} />
         </Grid>
         <Grid item md={8} xs={12}>
           <Paper className={classes.paper}>About Section</Paper>
