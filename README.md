@@ -38,6 +38,8 @@ Then every time after that:
 - `$ docker-compose up -d`
   Remove the `-d` if you want console read out and warnings
 
+- these two steps can be combined into one command `$ docker-compose up --build -d`
+
 Your Node Backend server will be running at `http://localhost:5000` and your client application will be running at `http://localhost:3000`
 
 To stop the services:

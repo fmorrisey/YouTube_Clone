@@ -1,6 +1,5 @@
 import React from "react";
 
-import Paper from "@material-ui/core/paper";
 import { makeStyles } from "@material-ui/core/styles";
 import useAxios from "axios-hooks";
 
@@ -10,9 +9,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   featuredVideo: {
-    backgroundColor: "#20202020",
+    backgroundColor: "#202020",
     borderRadius: theme.spacing(0.5),
-    margin: theme.spacing(2),
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(3),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
     padding: theme.spacing(2),
     color: "#ffffff",
   },
@@ -25,8 +27,19 @@ export default function FeatureRail() {
     "http://localhost:5000/featured/"
   );
 
-  if (loading) return <p>Loading . . .</p>;
-  if (error) return <p>Error . . .</p>;
+  if (loading)
+    return (
+      <div className={classes.featuredVideo}>
+        <p>Loading . . .</p>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className={classes.featuredVideo}>
+        <p>Error . . .</p>
+      </div>
+    );
 
   return (
     <>
