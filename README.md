@@ -59,3 +59,4 @@ If your container fails to build or exits with an error code
 
 - 01/24/2021: Docker-Compose tested and App Container deploys
 - 02/25/2021: Material-UI Core integrated into the project to match YouTube's theme
+- 05/25/2021: Added MongoDB server support for comments
