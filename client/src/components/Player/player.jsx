@@ -1,21 +1,24 @@
 import React from "react";
 import "./player.css";
 
-export default function player() {
+export default function player(props) {
+  console.log(props);
   return (
     <div>
       <iframe
-        title="A TITLE!"
-        src="https://www.youtube.com/embed/5qap5aO4i9A"
+        title="YouTube video player"
+        src={props.currentVideo.videoURL.toString()}
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
       <span>
-        <h1>TITLE!</h1>
+        <h2>{props.currentVideo.title}!</h2>
       </span>
       <span>
-        <p>Views!</p>
+        <p>
+          {props.currentVideo.views} views • {props.currentVideo.date}
+        </p>
         {/* Api props for view counts info */}
       </span>
     </div>

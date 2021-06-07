@@ -1,24 +1,23 @@
 @media screen and (min-device-width: 475px) {
-    iframe {
-        /* https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video */
-        width: 100%;
-        height: calc(100vw/2.5);
-    }
+  iframe {
+    /* https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video */
+    width: 100%;
+    height: calc(100vw / 2.5);
+  }
 }
 
 @media screen and (max-device-width: 680px) {
-    iframe {
-        width: 100%;
-        height: calc(100vw/1.5);
-        
-    }
-
+  iframe {
+    width: 100%;
+    height: calc(100vw / 1.5);
+  }
 }
 
 p {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
-h1 {
-    color: #FFFFFF;
+h1,
+h2 {
+  color: #ffffff;
 }

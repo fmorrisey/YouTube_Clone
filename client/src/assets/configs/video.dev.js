@@ -1,8 +1,12 @@
 const currentVideo = {
-  videoURL: "https://www.youtube.com/watch?v=i793Qm6kv3U",
-  title: "Understanding React's UI Rendering Process",
-  views: 18142,
-  date: "Nov 5, 2019",
+  videoURL: "https://www.youtube.com/embed/5qap5aO4i9A",
+  title: "lofi hip hop radio - beats to relax/study to",
+  views: 42046,
+  date: "Feb 22, 2020",
+  channel: "LoFi Girl",
+  subscribers: "8.58M",
+  description:
+    " (^ ^) Thank you for listening, I hope you will have a good time here",
 };
 
 module.exports = currentVideo;

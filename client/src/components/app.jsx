@@ -11,7 +11,8 @@ import FeatureRail from "./FeatureRail/FeatureRail";
 import Comments from "./Comments/Comments";
 import AboutSection from "./AboutSection/about";
 
-import featuredVideos from "../assets/configs/featured";
+import featuredVideos from "../assets/configs/featured.dev";
+import currentVideo from "../assets/configs/video.dev";
 
 //Class or Stateful Component
 
@@ -32,7 +33,12 @@ const useStyles = makeStyles((theme) => ({
   comments: {
     marginLeft: theme.spacing(10),
   },
-  featuredRail: {
+  featured: {
+    marginTop: theme.spacing(3),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+  },
+  about: {
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(3),
     marginRight: theme.spacing(3),
@@ -49,20 +55,17 @@ export default function App() {
       <Grid container spacing={0}>
         <Grid item md={9} xs={12}>
           <div className={classes.player}>
-            <Player />
+            <Player currentVideo={currentVideo} />
           </div>
         </Grid>
         <Grid item md={3} xs={12}>
           <FeatureRail
-            className={classes.featuredRail}
+            className={classes.featured}
             videoList={featuredVideos}
           />
         </Grid>
         <Grid item md={8} xs={12}>
-          <AboutSection
-            className={classes.aboutSection}
-            title={"Lo-Fi Chill Beats Yeah"}
-          />
+          <AboutSection className={classes.about} currentVideo={currentVideo} />
         </Grid>
         <Grid item md={8} xs={12}>
           <Comments className={classes.comments} />

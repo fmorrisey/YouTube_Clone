@@ -1,7 +1,6 @@
 import React from "react";
 import useAxios from "axios-hooks";
 import { makeStyles } from "@material-ui/core/styles";
-import { grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CoSmments() {
+export default function Comments() {
   const classes = useStyles();
 
   const [{ data, loading, error }, refetch] = useAxios(
