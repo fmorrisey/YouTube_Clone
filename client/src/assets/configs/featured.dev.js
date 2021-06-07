@@ -5,6 +5,7 @@ const featuredVideos = [
     author: "Jordan Walke",
     num_comments: 3,
     views: 423423,
+    date: "March 2020",
     objectID: 0,
   },
   {
@@ -13,6 +14,7 @@ const featuredVideos = [
     author: "Dan Abramov, Andrew Clark",
     num_comments: 2,
     views: 5232,
+    date: "March 2020",
     objectID: 1,
   },
   {
@@ -21,6 +23,7 @@ const featuredVideos = [
     author: "Scott Manly",
     num_comments: 5,
     views: 4532,
+    date: "March 2020",
     objectID: 2,
   },
   {
@@ -29,6 +32,7 @@ const featuredVideos = [
     author: "Lock Picking Lwayer",
     num_comments: 2,
     views: 5,
+    date: "March 2020",
     objectID: 3,
   },
 ];
