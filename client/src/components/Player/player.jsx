@@ -2,7 +2,6 @@ import React from "react";
 import "./player.css";
 
 export default function player(props) {
-  console.log(props);
   return (
     <div>
       <iframe
@@ -13,7 +12,7 @@ export default function player(props) {
         allowfullscreen
       ></iframe>
       <span>
-        <h2>{props.currentVideo.title}!</h2>
+        <h3>{props.currentVideo.title}!</h3>
       </span>
       <span>
         <p>

@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  app: {
+    marginLeft: theme.spacing(9),
+    marginRight: theme.spacing(9),
+  },
   sideRail: {
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(3),
@@ -52,8 +56,8 @@ export default function App() {
   return (
     <div className={classes.root}>
       <NavBar />
-      <Grid container spacing={0}>
-        <Grid item md={9} xs={12}>
+      <Grid container spacing={0} className={classes.app}>
+        <Grid item md={8} xs={12}>
           <div className={classes.player}>
             <Player currentVideo={currentVideo} />
           </div>

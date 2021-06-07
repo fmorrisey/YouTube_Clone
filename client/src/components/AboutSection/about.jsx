@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.spacing(0.5),
     margin: theme.spacing(2),
     padding: theme.spacing(2),
+
     color: "#FFFFFF",
   },
   icon: {
