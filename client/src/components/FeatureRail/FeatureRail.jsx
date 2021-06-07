@@ -20,31 +20,32 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FeatureRail() {
+export default function FeatureRail(props) {
   const classes = useStyles();
+  /*   Killed this for a temp config file
+        const [{ data, loading, error }, refetch] = useAxios(
+        "http://localhost:5000/featured/"
+        );
 
-  const [{ data, loading, error }, refetch] = useAxios(
-    "http://localhost:5000/featured/"
-  );
+    if (loading)
+        return (
+        <div className={classes.featuredVideo}>
+            <p>Loading . . .</p>
+        </div>
+        );
 
-  if (loading)
-    return (
-      <div className={classes.featuredVideo}>
-        <p>Loading . . .</p>
-      </div>
-    );
-
-  if (error)
-    return (
-      <div className={classes.featuredVideo}>
-        <p>Error . . .</p>
-      </div>
-    );
-
+    if (error)
+        return (
+        <div className={classes.featuredVideo}>
+            <p>Error . . .</p>
+        </div>
+        );
+    */
+  console.log(props.featured);
   return (
     <>
-      {data.map(function (featured) {
-        return <div className={classes.featuredVideo}>{featured.video}</div>;
+      {props.videoList.map(function (featured) {
+        return <div className={classes.featuredVideo}>{featured.title}</div>;
       })}
     </>
   );

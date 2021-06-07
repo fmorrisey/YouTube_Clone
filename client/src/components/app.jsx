@@ -9,6 +9,9 @@ import NavBar from "./NavBar/navBar";
 import Player from "./Player/player";
 import FeatureRail from "./FeatureRail/FeatureRail";
 import Comments from "./Comments/Comments";
+import AboutSection from "./AboutSection/about";
+
+import featuredVideos from "../assets/configs/featured";
 
 //Class or Stateful Component
 
@@ -38,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
+  console.log(featuredVideos);
 
   return (
     <div className={classes.root}>
@@ -49,10 +53,16 @@ export default function App() {
           </div>
         </Grid>
         <Grid item md={3} xs={12}>
-          <FeatureRail className={classes.featuredRail} />
+          <FeatureRail
+            className={classes.featuredRail}
+            videoList={featuredVideos}
+          />
         </Grid>
         <Grid item md={8} xs={12}>
-          <Paper className={classes.paper}>About Section</Paper>
+          <AboutSection
+            className={classes.aboutSection}
+            title={"Lo-Fi Chill Beats Yeah"}
+          />
         </Grid>
         <Grid item md={8} xs={12}>
           <Comments className={classes.comments} />
