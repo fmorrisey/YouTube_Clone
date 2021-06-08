@@ -66,16 +66,20 @@ export default function FeatureRail(props) {
       {props.videoList.map(function (featured) {
         return (
           <Grid container className={classes.ftVidItem}>
-            <Grid item md={3}>
-              <FVI className={classes.icon} />
-            </Grid>
+            <a href={featured.url}>
+              <Grid item md={3}>
+                <FVI className={classes.icon} />
+              </Grid>
+            </a>
             <Grid item md={9}>
-              <h4 className={classes.h4}>{featured.title}</h4>
-              <p>
-                {featured.author}
-                <br />
-                {featured.views} views • {featured.date}
-              </p>
+              <a href={featured.url}>
+                <h4 className={classes.h4}>{featured.title}</h4>
+                <p>
+                  {featured.author}
+                  <br />
+                  {featured.views} views • {featured.date}
+                </p>
+              </a>
             </Grid>
           </Grid>
         );
