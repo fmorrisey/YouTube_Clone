@@ -29,7 +29,7 @@ const featuredVideos = [
   {
     title: "Three is binding, nothing out of four",
     url: "https://LPL.js.org/",
-    author: "Lock Picking Lwayer",
+    author: "Lock Picking Lawyer",
     num_comments: 2,
     views: 5,
     date: "March 2020",
