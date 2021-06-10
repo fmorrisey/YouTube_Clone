@@ -65,7 +65,7 @@ export default function FeatureRail(props) {
         </div>
         );
     */
-
+  /*
   const uniqueTags = (videoList) => {
 
     let results2 = [ 
@@ -91,6 +91,7 @@ export default function FeatureRail(props) {
   };
 
   uniqueTags(props.videoList);
+  */
   return (
     <div className={classes.ftVidContainer}>
       {props.videoList.map((featured) => {
@@ -102,7 +103,7 @@ export default function FeatureRail(props) {
           </span>
         );
       })}
-      {props.videoList.map((featured) => {
+      {/* {props.videoList.map((featured) => {
         return (
           <>
             {featured.tags
@@ -111,7 +112,7 @@ export default function FeatureRail(props) {
           </>
         );
       })}
-      ;
+      ; */}
       {props.videoList.map((featured, index) => {
         return (
           <Grid container key={`feat-${index}`} className={classes.ftVidItem}>
