@@ -66,17 +66,52 @@ export default function FeatureRail(props) {
         );
     */
 
+  const uniqueTags = (videoList) => {
+
+    let results2 = [ 
+        ...new Set(videoList.flatMap(({ featured } => {
+            return featured.tags
+                .map((video) => video)
+        })))
+
+    ]
+
+    let tagGroup = videoList.map((featured) => {
+      return featured.tags
+        .map((video) => video)
+        .filter((value, index, self) => self.indexOf(value) === index);
+    });
+
+    let results = [
+      ...new Set(videoList.tags.flatMap(({ value }) => value)),
+    ].sort();
+    console.log(videoList);
+    console.log(results);
+    return tagGroup;
+  };
+
+  uniqueTags(props.videoList);
   return (
     <div className={classes.ftVidContainer}>
       {props.videoList.map((featured) => {
         return (
           <span>
-            {featured.tags.map((tag, index) => (
+            {featured.tags.map((tag) => (
               <>{tag}</>
             ))}
           </span>
         );
       })}
+      {props.videoList.map((featured) => {
+        return (
+          <>
+            {featured.tags
+              .map((video) => video.tag)
+              .filter((value, index, self) => self.indexOf(value) === index)}
+          </>
+        );
+      })}
+      ;
       {props.videoList.map((featured, index) => {
         return (
           <Grid container key={`feat-${index}`} className={classes.ftVidItem}>
