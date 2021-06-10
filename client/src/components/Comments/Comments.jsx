@@ -39,7 +39,7 @@ export default function Comments() {
     <>
       {data.map(function (comment) {
         return (
-          <div className={classes.comment}>
+          <div key={null} className={classes.comment}>
             <span>
               <ACO className={classes.icon} />
             </span>

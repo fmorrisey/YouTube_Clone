@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   h4: {
-    lineHeight: "0.01rem",
+    lineHeight: "1px",
+    marginBottom: theme.spacing(0),
   },
   ftVidContainer: {
     borderRadius: theme.spacing(0.5),
@@ -24,11 +25,12 @@ const useStyles = makeStyles((theme) => ({
   },
   ftVidItem: {
     marginTop: theme.spacing(1),
+    borderBottom: "1px solid #303030",
   },
   icon: {
     width: 48,
     height: 48,
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
     padding: theme.spacing(1),
     display: "flex",
     marginTop: "auto",
@@ -36,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
   },
   videoSlug: {
     backgroundColor: "#202020",
+  },
+  text: {
+    marginBottom: theme.spacing(2),
   },
 }));
 
@@ -60,21 +65,30 @@ export default function FeatureRail(props) {
         </div>
         );
     */
-  console.log(props.featured);
+
   return (
     <div className={classes.ftVidContainer}>
-      {props.videoList.map(function (featured) {
+      {props.videoList.map((featured) => {
         return (
-          <Grid container className={classes.ftVidItem}>
+          <span>
+            {featured.tags.map((tag, index) => (
+              <>{tag}</>
+            ))}
+          </span>
+        );
+      })}
+      {props.videoList.map((featured, index) => {
+        return (
+          <Grid container key={`feat-${index}`} className={classes.ftVidItem}>
             <a href={featured.url}>
               <Grid item md={3}>
                 <FVI className={classes.icon} />
               </Grid>
             </a>
-            <Grid item md={9}>
+            <Grid item md={6}>
               <a href={featured.url}>
                 <h4 className={classes.h4}>{featured.title}</h4>
-                <p>
+                <p className={classes.text}>
                   {featured.author}
                   <br />
                   {featured.views} views • {featured.date}

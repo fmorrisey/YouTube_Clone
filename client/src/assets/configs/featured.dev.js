@@ -7,6 +7,7 @@ const featuredVideos = [
     views: 423423,
     date: "March 2020",
     objectID: 0,
+    tags: ["React", "Development"],
   },
   {
     title: "Redux",
@@ -15,7 +16,8 @@ const featuredVideos = [
     num_comments: 2,
     views: 5232,
     date: "March 2020",
-    objectID: 1,
+    objectID: 2,
+    tags: ["React", "Redux", "Development"],
   },
   {
     title: "Fly Safe Eh",
@@ -24,16 +26,18 @@ const featuredVideos = [
     num_comments: 5,
     views: 4532,
     date: "March 2020",
-    objectID: 2,
+    objectID: 1,
+    tags: ["Space", "Rockets"],
   },
   {
-    title: "Three is binding, nothing out of four",
+    title: "Three is binding...",
     url: "https://LPL.js.org/",
     author: "Lock Picking Lawyer",
     num_comments: 2,
     views: 5,
     date: "March 2020",
     objectID: 3,
+    tags: ["LockPicking", "DIY"],
   },
 ];
 
